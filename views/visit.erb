@@ -1,12 +1,30 @@
 <h1>Записаться</h1>
-<form action="/visit">
+<form action="/visit" method="post">
+
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <label>Ваше имя</label>
+    <input name="username" type="text" class="form-control" placeholder="Имя">
   </div>
   <div class="form-group">
-    <label>Выше имя</label>
-    <input type="text" class="form-control" id="exampleInputName2" placeholder="Имя">
+    <label>Ваш телефон</label>
+    <input name="phone" type="text" class="form-control" placeholder="номер">
   </div>
+  <div class="form-group">
+    <label>Когда вас ждать</label>
+    <input name="datetime" type="text" class="form-control" placeholder="время">
+  </div>
+  <div class="form-group">
+    <label>Ваш парикмахер</label>
+    <select name="spec" class="form-control">
+      <option>Вася</option>
+      <option>Анна</option>
+      <option>Сергей</option>
+      <option>Коля</option>
+      <option>Наташа</option>
+    </select>
+  </div>
+
+
   <button type="submit" class="btn btn-primary">Записаться</button>
 </form>
+
