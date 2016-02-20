@@ -40,8 +40,9 @@ post '/visit' do
   @phone=params[:phone]
   @spec=params[:spec]
   @datetime=params[:datetime]
+  @color=params[:color]
 
-  erb "OK. : #{@username}  #{@phone} #{@datetime} #{@spec} "
+  erb "OK. : #{@username}  #{@phone} #{@datetime} #{@spec} #{@color}"
 end
 get '/login/form' do
   erb :login_form
