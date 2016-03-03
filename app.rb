@@ -42,7 +42,11 @@ post '/visit' do
   @datetime=params[:datetime]
   @color=params[:color]
 
-  erb "OK. : #{@username}  #{@phone} #{@datetime} #{@spec} #{@color}"
+  if @username==''
+    @error="Введите имя"
+  end
+
+  return erb :visit
 end
 get '/login/form' do
   erb :login_form
