@@ -1,4 +1,8 @@
-.alert-error {
- border: 1px solid #f01;
- background: #ffb3b8;
+.alert-error:not(:empty) {
+    border: 1px solid #f01;
+    background: #ffb3b8;
+}
+
+.select[name="spec"] {
+    width: 150px;
 }

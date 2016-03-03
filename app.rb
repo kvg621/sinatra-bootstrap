@@ -41,12 +41,24 @@ post '/visit' do
   @spec=params[:spec]
   @datetime=params[:datetime]
   @color=params[:color]
+  @error=''
 
+
+  if @phone==''
+    @error+="Введите телефон "
+    return erb :visit
+  end
   if @username==''
-    @error="Введите имя"
+    @error+="Введите имя "
+    return erb :visit
+  end
+  if @error==''
+  return erb :visit
   end
 
-  return erb :visit
+
+
+  erb "#{@username} #{@phone}  #{@spec} #{@datetime} #{@color}"
 end
 get '/login/form' do
   erb :login_form
