@@ -43,11 +43,11 @@
     </select>
     <script type="text/javascript">
       $('select[name="color"]').simplecolorpicker();
-     // $('select[name="colorpicker"]').simplecolorpicker({
-     //   picker: true
-     // }).on('change', function() {
-     //   $(document.body).css('background-color', $('select[name="colorpicker"]').val());
-    //  });
+    $('select[name="colorpicker"]').simplecolorpicker({
+      picker: true
+    }).on('change', function() {
+      $(document.body).css('background-color', $('select[name="colorpicker"]').val());
+   });
     </script>
 
   </div>
